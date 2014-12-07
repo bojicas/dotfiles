@@ -134,7 +134,8 @@ if has("gui_running")
   colorscheme jellybeans
   "colorscheme lucius
 else
-  colorscheme xoria256
+  colorscheme jellybeans
+  "colorscheme xoria256
   "colorscheme cobalt
   "colorscheme twilight256
   "colorscheme molokai
@@ -150,8 +151,8 @@ set guifont=PragmataPro:h13
 let g:airline_left_sep = '»'
 let g:airline#extensions#tabline#enabled = 1 "smart tab
 
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
+"let g:airline#extensions#tabline#left_sep = ''
+"let g:airline#extensions#tabline#left_alt_sep = ''
 "let g:airline#extensions#tabline#right_sep = ''
 "let g:airline#extensions#tabline#right_alt_sep = ''
 let g:airline_left_sep = '▶'
@@ -162,15 +163,15 @@ let g:airline_symbols.whitespace = 'Ξ'
 
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
-let g:airline_left_sep = ''
+"let g:airline_left_sep = ''
 let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
+"let g:airline_left_alt_sep = ''
+"let g:airline_right_sep = ''
 let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
+"let g:airline_right_alt_sep = ''
+"let g:airline_symbols.branch = ''
+"let g:airline_symbols.readonly = ''
+"let g:airline_symbols.linenr = ''
 
 if has("autocmd")
   filetype indent plugin on
