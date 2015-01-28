@@ -9,10 +9,10 @@ set history=5000
 set backupdir=~/.backup
 set directory=~/.backup
 
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 filetype plugin indent on
 
@@ -68,6 +68,21 @@ Plugin 'honza/vim-snippets'
 Plugin 'Gundo'
 Plugin 'othree/html5.vim'
 Plugin 'jelera/vim-javascript-syntax'
+
+" Plugin 'Rename2'
+" Plugin 'ack.vim'
+" Plugin 'bufkill.vim'
+" Plugin 'csv.vim'
+" Plugin 'nerdcommenter'
+" Plugin 'supertab'
+" Plugin 'textile.vim'
+" Plugin 'vim-colors-solarized'
+" Plugin 'vim-css3-syntax'
+" Plugin 'vim-easymotion'
+" Plugin 'vim-git'
+" Plugin 'vim-javascript'
+" Plugin 'vim-markdown'
+
 
 set mouse=a
 set mousehide
@@ -134,10 +149,10 @@ if has("gui_running")
   colorscheme jellybeans
   "colorscheme lucius
 else
-  colorscheme jellybeans
+  "colorscheme jellybeans
   "colorscheme xoria256
   "colorscheme cobalt
-  "colorscheme twilight256
+  colorscheme twilight256
   "colorscheme molokai
 endif
 
