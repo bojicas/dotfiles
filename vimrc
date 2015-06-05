@@ -56,6 +56,8 @@ Plugin 'mustache/vim-mustache-handlebars'
 " Plugin 'dsawardekar/portkey'
 " Plugin 'dsawardekar/ember.vim'
 Plugin 'groenewege/vim-less'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'wavded/vim-stylus'
 
 Plugin 'scrooloose/syntastic'
 
