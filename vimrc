@@ -249,6 +249,12 @@ au BufRead,BufNewFile *.less set filetype=less
 " Set filetype for markdown
 au BufRead,BufNewFile *.md set filetype=markdown
 
+" Set filetype for coffeescript
+au BufRead,BufNewFile *.coffee set filetype=coffee
+
+" Set fietype for stylus
+au BufRead,BufNewFile *.styl set filetype=stylus
+
 " set MiniBufExplorer shortcuts
 " map <Leader>me :MBEOpen<cr>
 " map <Leader>mc :MBEClose<cr>
@@ -266,3 +272,15 @@ let g:syntastic_warning_symbol = "!!"
 let g:syntastic_enable_balloons = 1
 
 set backspace=indent,eol,start
+
+set background=dark
+
+highlight ColorColumn ctermbg=235
+set colorcolumn=81
+
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_guide_size = 1
+autocmd VimEnter,Colorscheme * :hi IndentGuideOdd ctermbg=235
+autocmd VimEnter,Colorscheme * :hi IndentGuideEven ctermbg=235
+
+au BufRead,BufNewFile * :IndentGuidesEnable
