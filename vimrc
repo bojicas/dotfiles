@@ -89,6 +89,8 @@ set mousehide
 set laststatus=2
 set nonumber
 let mapleader=","
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 nmap <silent> <Leader>q :NERDTreeToggle<CR>
 set wildmenu
 set nowrap
