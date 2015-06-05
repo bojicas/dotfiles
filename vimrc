@@ -280,7 +280,7 @@ set colorcolumn=81
 
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 1
-autocmd VimEnter,Colorscheme * :hi IndentGuideOdd ctermbg=235
-autocmd VimEnter,Colorscheme * :hi IndentGuideEven ctermbg=235
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=235
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=235
 
 au BufRead,BufNewFile * :IndentGuidesEnable
