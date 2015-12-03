@@ -21,9 +21,10 @@ Plug 'L9'
 Plug 'mhinz/vim-grepper'
 Plug 'Shougo/deoplete.nvim'
 Plug 'Shougo/unite.vim'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'jreybert/vimagit'
 
 Plug 'sheerun/vim-polyglot'
 " Plug 'marijnh/tern_for_vim'
@@ -100,18 +101,24 @@ Plug 'mxw/vim-jsx'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plug 'junegunn/fzf.vim'
 
+Plug 'ashisha/image.vim'
+Plug 'tpope/vim-speeddating'
+Plug 'davidoc/taskpaper.vim'
+
 call plug#end()
 
 set mouse=a
 set mousehide
 set laststatus=2
-set nonumber
 let mapleader=","
 "" autocmd StdinReadPre * let s:std_in=1
 "" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 nmap <silent> <Leader>q :NERDTreeToggle<CR>
 set wildmenu
 set nowrap
+
+set relativenumber
+set number
 
 " au VimEnter * set relativenumber
 " au insertEnter * set norelativenumber
@@ -121,7 +128,6 @@ set nowrap
 " au FocusLost * set norelativenumber
 " au FocusGained * set number
 " au FocusGained * set relativenumber
-set relativenumber
 
 set autoindent
 set shiftwidth=2
@@ -248,10 +254,10 @@ map <Esc>[B <Down>
 nnoremap <F5> :GundoToggle<CR>
 
 " RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+" map <Leader>t :call RunCurrentSpecFile()<CR>
+" map <Leader>s :call RunNearestSpec()<CR>
+" map <Leader>l :call RunLastSpec()<CR>
+" map <Leader>a :call RunAllSpecs()<CR>
 
 " Vim gitgutter
 highlight clear SignColumn
@@ -278,6 +284,10 @@ au BufRead,BufNewFile *.less set filetype=less
 
 " Set filetype for markdown
 au BufRead,BufNewFile *.md set filetype=markdown
+
+" Set filetype for taskpaper
+au BufRead,BufNewFile *.taskpaper set filetype=taskpaper
+au BufRead,BufNewFile *.taskpaper set syntax=taskpaper
 
 " Set filetype for coffeescript
 au BufRead,BufNewFile *.coffee set filetype=coffee
@@ -347,6 +357,9 @@ nnoremap <leader>ag  :Grepper! -tool ag  -open -switch
 nnoremap <leader>ack  :Ack 
 nnoremap <leader>ff  :FZF<cr>
 nnoremap <leader>fp  :Ag<cr>
+nnoremap <leader>fh  :History<cr>
+nnoremap <leader>fn  :e ~/.notes.md<cr>
+nnoremap <leader>ft  :e ~/.todods.taskpaper<cr>
 nnoremap <leader>u  :Unite
 nnoremap <leader>un  :Unite<cr>
 nnoremap <leader>uf  :Unite file<cr>
@@ -357,3 +370,10 @@ command! -nargs=* -complete=file GG Grepper! -tool git -query <args>
 command! -nargs=* -complete=file Ag Grepper! -tool ag -query <args>
 
 set spell
+
+" use regular expressions for local searching
+" nnoremap / /\v
+
+" ignorecase on search
+set ignorecase
+set smartcase
