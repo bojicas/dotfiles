@@ -1,6 +1,10 @@
 set nocompatible
 filetype off
 
+" Enable true colors in terminal & cursor shape
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+
 "Enable persistent undo
 set undofile
 set undodir=/tmp
@@ -190,12 +194,12 @@ else
   "colorscheme spacedust
 endif
 
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h14
+set guifont=PragmataPro:h14
 
-  set encoding=utf-8
-  if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-  endif
+set encoding=utf-8
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
 
 let g:airline_left_sep = '»'
 let g:airline#extensions#tabline#enabled = 1 "smart tab
@@ -314,7 +318,7 @@ imap <expr> <C-]> emmet#expandAbbrIntelligent("\<C-]>")
 set backspace=indent,eol,start
 
 highlight ColorColumn ctermbg=7
-set colorcolumn=81
+set colorcolumn=101
 
 " let g:indent_guides_auto_colors = 0
 " let g:indent_guides_guide_size = 1
